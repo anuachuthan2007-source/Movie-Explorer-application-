@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🎬 Movie Explorer</h1>
+        <p>Search and explore your favourite movies</p>
+    </header>
+
+    <main>
+
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search for a movie..."
+            >
+            <button onclick="searchMovies()">Search</button>
+        </div>
+
+        <div class="filters">
+            <button onclick="loadCategory('popular')">Popular</button>
+            <button onclick="loadCategory('action')">Action</button>
+            <button onclick="loadCategory('comedy')">Comedy</button>
+            <button onclick="loadCategory('drama')">Drama</button>
+        </div>
+
+        <p id="loading">Loading movies...</p>
+        <p id="error"></p>
+
+        <section id="movieContainer"></section>
+
+    </main>
+
+    <div id="modal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close" onclick="closeModal()">×</span>
+
+            <img id="modalPoster" src="" alt="Movie Poster">
+
+            <div>
+                <h2 id="modalTitle"></h2>
+                <p id="modalRating"></p>
+                <p id="modalDescription"></p>
+                <p id="modalGenre"></p>
+                <p id="modalYear"></p>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
